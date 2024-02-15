@@ -64,4 +64,11 @@ Those files will be utomatically generated for us
 Use extension: vscode-proto3 to see colours in proto file
 
 
+Install proto Compiler : https://www.youtube.com/watch?v=ES_GI-lmhEU
+Check version via: protoc --version
 
+Now run following command in Terminal
+    protoc --go_out=. --go-grpc_out=. proto/greet.proto
+As you hit enter,
+    we get 2 files: greet.pb.go
+                    greet_grpc.pb.go
