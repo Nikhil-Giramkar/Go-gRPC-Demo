@@ -33,4 +33,7 @@ func main() {
 	//ServerStream
 	callSayHelloServerStream(client, nameList)
 
+	//Client Stream
+	callSayHelloClientStream(client, nameList)
+
 }

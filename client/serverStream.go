@@ -14,7 +14,7 @@ func callSayHelloServerStream(client pb.GreetServiceClient, names *pb.NameList) 
 	stream, err := client.SayHelloServerStreaming(context.Background(), names)
 
 	if err != nil {
-		log.Fatalf("Failed to read from SayHello(): %v", err)
+		log.Fatalf("Failed to read from SayHelloServerStreaming(): %v", err)
 	}
 
 	for {
