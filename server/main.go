@@ -1,10 +1,11 @@
 package main
 
 import (
-	pb "github.com/Nikhil-Giramkar/Go-gRPC-Demo/proto"
-	"google.golang.org/grpc"
 	"log"
 	"net"
+
+	pb "github.com/Nikhil-Giramkar/Go-gRPC-Demo/proto"
+	"google.golang.org/grpc"
 )
 
 const (
@@ -12,7 +13,7 @@ const (
 )
 
 type helloServer struct {
-	pb.GreetServiceServer;
+	pb.GreetServiceServer
 }
 
 func main() {
