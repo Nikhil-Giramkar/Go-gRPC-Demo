@@ -9,11 +9,33 @@ option go_package = "./proto";
 package greet_service;
 
 service GreetService {
+
+    //Unary API
     rpc SayHello(NoParams) returns (HelloResponse);
+
+    //This will return stream of data from server to client
+    rpc SayHelloServerStreaming(NameList) returns (stream HelloResponse);
+
+    //Client-side streamimg
+    rpc SayHelloClientStreaming(stream HelloRequest) returns (MessageList);
+
+    //Bi-directional streaming
+    rpc SayHelloBiDirectionalStreaming(stream HelloRequest) returns (stream HelloResponse);
 }
 
 message NoParams{};
 
+message HelloRequest{
+    string name=1;
+}
+
 message HelloResponse{
     string message=1;
+}
+
+message NameList{
+    repeated string names = 1;
+}
+message MessageList{
+    repeated string messages=1;
 }
