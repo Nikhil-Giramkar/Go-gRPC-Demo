@@ -27,13 +27,21 @@ func main() {
 	//Unary
 	callSayHello(client)
 
+	print("-------------------------------------------------------------------")
 	nameList := &pb.NameList{
 		Names: []string{"Nikhil", "Ansh", "Maria"},
 	}
 	//ServerStream
 	callSayHelloServerStream(client, nameList)
 
+	print("-------------------------------------------------------------------")
+
 	//Client Stream
 	callSayHelloClientStream(client, nameList)
+	print("-------------------------------------------------------------------")
+
+	//Bi-Directional
+	callSayHelloBiDirectionalStream(client, nameList)
+	print("-------------------------------------------------------------------")
 
 }
