@@ -1,0 +1,19 @@
+
+syntax="proto3";
+
+//The files that will be automatically generated will be stored at below location
+option go_package = "./proto";
+
+
+//name of package as below
+package greet_service;
+
+service GreetService {
+    rpc SayHello(NoParams) returns (HelloResponse);
+}
+
+message NoParams{};
+
+message HelloResponse{
+    string message=1;
+}

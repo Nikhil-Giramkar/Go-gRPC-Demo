@@ -48,5 +48,20 @@ Start Coding....
 First of all
     go mod init github.com/Nikhil-Giramkar/Go-gRPC-Demo
 
+Create seperate folders For
+    Client
+    Server
+    Proto
+Client and server will have seperate main.go
+
+Proto will have greet.proto file
+All RPC calls will be defined in greet.proto file.
+
+But the actual code required for interaction between client and server will be in 
+something called as "pb.go" and "greet_grpc.go" file
+Those files will be utomatically generated for us
+
+Use extension: vscode-proto3 to see colours in proto file
+
 
 
