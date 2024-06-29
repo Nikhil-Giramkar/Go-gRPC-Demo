@@ -76,3 +76,18 @@ As you hit enter,
 
 start server, then client
      go run .
+
+----------------------------------------------------
+We can test each gRPC end point on Postman
+Guide: https://www.youtube.com/watch?v=yluYiCj71ss
+
+We can also debug line by line, whenever an endpoint is hit.
+Using vs code debugger.
+
+Run the program in debug mode.
+Add breakpoint inside the gRPC function.
+
+Go to postman and send a sample message.
+Breakpoint is hit and we can debug it line by line.
+Once function is over, we see response in PostMan output screen.
+-----------------------------------------------------------
